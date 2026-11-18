@@ -1,0 +1,80 @@
+export const projectsData = [
+  {
+    id: 1,
+    title: "Custom Trex® Transcend Deck with Black Aluminum Balusters",
+    location: "Fuquay-Varina, NC",
+    category: "decks",
+    material: "Trex® Transcend Composite (Havana Gold & Spiced Rum)",
+    priceRange: "$22,000 – $26,000",
+    timeline: "9 Days Construction",
+    description: "Full tear-down of aging 12x14 builder deck, replaced with an expanded 18x24 two-tone Trex Transcend composite deck. Features integrated picture-frame borders, low-voltage riser lights, and powder-coated black aluminum balusters for unobstructed backyard views.",
+    image: "https://images.unsplash.com/photo-1591825729269-caeb344f6df2?auto=format&fit=crop&w=1200&q=80",
+    badge: "Featured Build",
+    specs: ["432 sq.ft. usable space", "Simpson Strong-Tie® joist hangers", "Concealed fastener system", "Black matte aluminum rail"]
+  },
+  {
+    id: 2,
+    title: "Gable-Roof Screened Porch Addition with Vaulted Pine Ceiling",
+    location: "Holly Springs, NC",
+    category: "porches",
+    material: "Custom Framing & Stained Southern Yellow Pine",
+    priceRange: "$28,000 – $32,000",
+    timeline: "3.5 Weeks Construction",
+    description: "Vaulted gable roof addition seamlessly tied into existing two-story residential roofline. Features tongue-and-groove stained pine ceilings, pre-wired dual outdoor ceiling fans, recessed LED spotlights, and ultra-clear pet-resistant screening.",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+    badge: "Porch Showcase",
+    specs: ["Seamless roof tie-in", "Tongue & groove ceiling", "Pre-wired 4-circuit electric", "Tight-frame bug barrier"]
+  },
+  {
+    id: 3,
+    title: "Pressure-Treated Timber Deck & Custom Horizontal Privacy Wall",
+    location: "Southern Wake County",
+    category: "decks",
+    material: "#1 Grade Southern Yellow Pine",
+    priceRange: "$12,500 – $15,000",
+    timeline: "6 Days Construction",
+    description: "Durable, classic wood deck built using premium kiln-dried #1 pressure-treated lumber. Includes an 8-foot horizontal slat privacy wall on the lot boundary, heavy-duty 6x6 support posts, and wide cascading steps.",
+    image: "https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=1200&q=80",
+    badge: "Classic Wood",
+    specs: ["Custom privacy louvers", "12\" on-center framing", "Oversized structural footings", "Rot-resistant ledger flashing"]
+  },
+  {
+    id: 4,
+    title: "Covered Patio & Composite Staircase Upgrade",
+    location: "Apex, NC",
+    category: "porches",
+    material: "Trex® Enhance & Cedar Timber Posts",
+    priceRange: "$19,000 – $23,000",
+    timeline: "2 Weeks Construction",
+    description: "Converted an unshaded concrete pad into a luxurious all-weather outdoor retreat. Built with wrapped cedar structural columns, architectural shingle roofing matching the main residence, and composite wide wrap-around staircases.",
+    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
+    badge: "Patio Conversion",
+    specs: ["Wrapped structural posts", "Architectural shingle match", "Recessed perimeter lighting", "Wide wrap-around steps"]
+  },
+  {
+    id: 5,
+    title: "Multi-Level Trex® Composite Deck & Wrap-Around Benches",
+    location: "Willow Spring, NC",
+    category: "decks",
+    material: "Trex® Select & Powder-Coated Metal Railing",
+    priceRange: "$24,000 – $29,000",
+    timeline: "10 Days Construction",
+    description: "Split-level outdoor entertaining deck designed for sloping backyard terrain. Upper dining deck transitions smoothly to lower lounge area with built-in composite perimeter benches and flush post-cap lighting.",
+    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
+    badge: "Multi-Level",
+    specs: ["Multi-tier dining & lounge", "Integrated perimeter seating", "10 low-voltage LED caps", "Engineered slope foundation"]
+  },
+  {
+    id: 6,
+    title: "Custom Screened Porch with Fireplace & Eze-Breeze® Ready Track",
+    location: "Fuquay-Varina, NC",
+    category: "porches",
+    material: "Vaulted Timber Framing & Composite Floor Deck",
+    priceRange: "$32,000 – $38,000",
+    timeline: "4 Weeks Construction",
+    description: "Four-season screened porch extension complete with stone fireplace surround, beadboard ceiling, cable railing on adjoining grilling deck, and modular Eze-Breeze® sliding panel tracks for winter comfort.",
+    image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80",
+    badge: "Four-Season Luxury",
+    specs: ["Fireplace chimney tie-in", "Eze-Breeze® track compatible", "Vaulted beadboard finish", "Trex composite flooring"]
+  }
+];
