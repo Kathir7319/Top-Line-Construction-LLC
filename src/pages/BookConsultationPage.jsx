@@ -43,7 +43,6 @@ export default function BookConsultationPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simulate high-reliability submission
     setSubmitted(true);
     window.scrollTo({ top: 300, behavior: 'smooth' });
   };
@@ -61,15 +60,15 @@ export default function BookConsultationPage() {
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
             {/* LEFT COLUMN: VALUE PROP, TRUST, CREDENTIALS */}
-            <div className="lg:col-span-5 space-y-8">
+            <div className="lg:col-span-5 space-y-7">
               <div>
                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-400 text-xs sm:text-sm font-bold tracking-wide uppercase mb-4 backdrop-blur">
-                  <Calendar className="w-4 h-4 text-amber-400" />
+                  <Calendar className="w-4 h-4 text-amber-400 flex-shrink-0" />
                   <span>Free In-Home Design Consultation</span>
                 </div>
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-white tracking-tight leading-tight">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-white tracking-tight leading-[1.12]">
                   Book Your Free In-Home Design Consultation
                 </h1>
                 <p className="mt-4 text-slate-300 text-base leading-relaxed">
@@ -80,19 +79,19 @@ export default function BookConsultationPage() {
               {/* What to Expect Callout */}
               <div className="bg-slate-900/90 rounded-2xl p-6 border-l-4 border-amber-500 border-y border-r border-slate-800 shadow-xl space-y-3">
                 <div className="flex items-center gap-2 text-amber-400 font-bold text-sm font-heading uppercase tracking-wider">
-                  <Sparkles className="w-4 h-4 text-amber-400" />
+                  <Sparkles className="w-4 h-4 text-amber-400 flex-shrink-0" />
                   <span>What to Expect:</span>
                 </div>
                 <p className="text-slate-300 text-sm leading-relaxed">
                   No high-pressure sales tactics—just honest structural advice and a clear, itemized proposal within 48 hours of our visit.
                 </p>
-                <div className="pt-2 flex items-center gap-4 text-xs text-slate-400">
-                  <span className="flex items-center gap-1 font-semibold text-white">
-                    <Clock className="w-3.5 h-3.5 text-amber-400" /> 45-Min On-Site
+                <div className="pt-2 flex items-center gap-4 text-xs text-slate-400 border-t border-slate-800/80">
+                  <span className="flex items-center gap-1.5 font-semibold text-white">
+                    <Clock className="w-3.5 h-3.5 text-amber-400 flex-shrink-0" /> 45-Min On-Site
                   </span>
                   <span>•</span>
-                  <span className="flex items-center gap-1 font-semibold text-white">
-                    <FileCheck className="w-3.5 h-3.5 text-amber-400" /> 48-Hr Written Quote
+                  <span className="flex items-center gap-1.5 font-semibold text-white">
+                    <FileCheck className="w-3.5 h-3.5 text-amber-400 flex-shrink-0" /> 48-Hr Written Quote
                   </span>
                 </div>
               </div>
@@ -100,12 +99,12 @@ export default function BookConsultationPage() {
               {/* Service Areas */}
               <div className="space-y-3">
                 <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400">
-                  Confirmed Service Area:
+                  Confirmed Wake County Service Area:
                 </h3>
                 <div className="flex flex-wrap gap-2 text-xs font-semibold text-slate-200">
                   {['Fuquay-Varina', 'Holly Springs', 'Apex', 'Garner', 'Willow Spring', 'Southern Wake County'].map((city, idx) => (
-                    <span key={idx} className="flex items-center gap-1 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800 text-amber-300">
-                      <MapPin className="w-3 h-3 text-amber-400" /> {city}
+                    <span key={idx} className="flex items-center gap-1.5 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800 text-amber-300">
+                      <MapPin className="w-3 h-3 text-amber-400 flex-shrink-0" /> {city}
                     </span>
                   ))}
                 </div>
@@ -116,24 +115,24 @@ export default function BookConsultationPage() {
                 <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400">
                   Contractor Credentials &amp; Standards:
                 </h3>
-                <div className="space-y-2 text-xs text-slate-300">
-                  <div className="flex items-center gap-2.5">
-                    <ShieldCheck className="w-4 h-4 text-amber-400 flex-shrink-0" />
-                    <span><strong>Fully Insured:</strong> Comprehensive General Liability coverage verified on every proposal</span>
+                <div className="space-y-2.5 text-xs text-slate-300">
+                  <div className="flex items-start gap-2.5">
+                    <ShieldCheck className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
+                    <span><strong>Fully Insured:</strong> Comprehensive General Liability coverage verified on every proposal.</span>
                   </div>
-                  <div className="flex items-center gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-amber-400 flex-shrink-0" />
-                    <span><strong>NC Building Code Compliant:</strong> Permitted through Wake County inspections</span>
+                  <div className="flex items-start gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
+                    <span><strong>NC Building Code Compliant:</strong> Permitted through Wake County inspections.</span>
                   </div>
-                  <div className="flex items-center gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-amber-400 flex-shrink-0" />
-                    <span><strong>Transparent Proposals:</strong> Detailed material and labor itemization ($10k–$30k+ typical scope)</span>
+                  <div className="flex items-start gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
+                    <span><strong>Transparent Proposals:</strong> Detailed material and labor itemization ($10k–$30k+ typical scope).</span>
                   </div>
                 </div>
               </div>
 
               {/* Direct Phone Backup */}
-              <div className="bg-slate-900/50 p-4 rounded-xl border border-slate-800 flex items-center justify-between">
+              <div className="bg-slate-900/60 p-4 rounded-2xl border border-slate-800 flex items-center justify-between">
                 <div>
                   <span className="text-xs text-slate-400 block">Prefer to schedule over the phone?</span>
                   <a href="tel:9198882931" className="text-base font-extrabold text-amber-400 hover:underline">
@@ -166,7 +165,7 @@ export default function BookConsultationPage() {
                       </p>
                     </div>
 
-                    <div className="bg-slate-50 rounded-2xl p-6 text-left border border-slate-200 text-xs sm:text-sm space-y-2.5 max-w-md mx-auto">
+                    <div className="bg-slate-50 rounded-2xl p-6 text-left border border-slate-200 text-xs sm:text-sm space-y-3 max-w-md mx-auto">
                       <p className="font-bold text-slate-900 border-b border-slate-200 pb-2">
                         Next Steps for Your In-Home Visit:
                       </p>
@@ -193,7 +192,7 @@ export default function BookConsultationPage() {
                     </button>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form onSubmit={handleSubmit} className="space-y-5">
                     <div>
                       <h2 className="text-2xl font-extrabold font-heading text-slate-950">
                         Project Details Form
@@ -203,7 +202,7 @@ export default function BookConsultationPage() {
                       </p>
                     </div>
 
-                    {/* Section: Contact Info */}
+                    {/* Row 1: Full Name & Phone Number */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
@@ -216,7 +215,7 @@ export default function BookConsultationPage() {
                           value={formData.fullName}
                           onChange={handleChange}
                           placeholder="e.g. Michael Smith"
-                          className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm text-slate-900 bg-white"
+                          className="w-full h-12 px-4 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm text-slate-900 bg-white"
                         />
                       </div>
 
@@ -231,15 +230,14 @@ export default function BookConsultationPage() {
                           value={formData.phone}
                           onChange={handleChange}
                           placeholder="(919) 000-0000"
-                          className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm text-slate-900 bg-white"
+                          className="w-full h-12 px-4 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm text-slate-900 bg-white"
                         />
-                        <span className="text-[10px] text-slate-400 mt-0.5 block">Used for appointment confirmation</span>
                       </div>
                     </div>
 
-                    {/* Section: Email & Address */}
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                      <div className="sm:col-span-2">
+                    {/* Row 2: Email Address & Zip Code */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
                         <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                           Email Address *
                         </label>
@@ -250,13 +248,13 @@ export default function BookConsultationPage() {
                           value={formData.email}
                           onChange={handleChange}
                           placeholder="michael@example.com"
-                          className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm text-slate-900 bg-white"
+                          className="w-full h-12 px-4 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm text-slate-900 bg-white"
                         />
                       </div>
 
                       <div>
                         <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                          Zip Code *
+                          Zip Code (Wake County) *
                         </label>
                         <input
                           type="text"
@@ -264,15 +262,16 @@ export default function BookConsultationPage() {
                           required
                           value={formData.zipCode}
                           onChange={handleChange}
-                          placeholder="27526"
-                          className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm text-slate-900 bg-white"
+                          placeholder="e.g. 27526 (Fuquay-Varina)"
+                          className="w-full h-12 px-4 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm text-slate-900 bg-white"
                         />
                       </div>
                     </div>
 
+                    {/* Row 3: Property Street Address */}
                     <div>
                       <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                        Property Street Address (Fuquay-Varina / Wake Co.) *
+                        Property Street Address (Fuquay-Varina / Wake County) *
                       </label>
                       <input
                         type="text"
@@ -281,12 +280,12 @@ export default function BookConsultationPage() {
                         value={formData.address}
                         onChange={handleChange}
                         placeholder="Street address where deck/porch will be built"
-                        className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm text-slate-900 bg-white"
+                        className="w-full h-12 px-4 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm text-slate-900 bg-white"
                       />
                     </div>
 
-                    {/* Dropdowns from Blueprint */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                    {/* Row 4: Project Type & Estimated Budget Range */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                           Project Type (Dropdown) *
@@ -295,7 +294,7 @@ export default function BookConsultationPage() {
                           name="projectType"
                           value={formData.projectType}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm text-slate-900 bg-white"
+                          className="w-full h-12 px-4 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm text-slate-900 bg-white cursor-pointer"
                         >
                           <option value="Custom Composite Deck (Trex)">Custom Composite Deck (Trex)</option>
                           <option value="Pressure-Treated Wood Deck">Pressure-Treated Wood Deck</option>
@@ -313,7 +312,7 @@ export default function BookConsultationPage() {
                           name="budgetRange"
                           value={formData.budgetRange}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm text-slate-900 bg-white"
+                          className="w-full h-12 px-4 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm text-slate-900 bg-white cursor-pointer"
                         >
                           <option value="$10,000 – $15,000">$10,000 – $15,000</option>
                           <option value="$15,000 – $25,000">$15,000 – $25,000</option>
@@ -323,6 +322,7 @@ export default function BookConsultationPage() {
                       </div>
                     </div>
 
+                    {/* Row 5: Start Timeframe & Preferred Time Window */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
@@ -332,7 +332,7 @@ export default function BookConsultationPage() {
                           name="timeframe"
                           value={formData.timeframe}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm text-slate-900 bg-white"
+                          className="w-full h-12 px-4 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm text-slate-900 bg-white cursor-pointer"
                         >
                           <option value="Ready to Start Within 30 Days">Ready to Start Within 30 Days</option>
                           <option value="1–3 Months Out">1–3 Months Out</option>
@@ -348,7 +348,7 @@ export default function BookConsultationPage() {
                           name="preferredTime"
                           value={formData.preferredTime}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm text-slate-900 bg-white"
+                          className="w-full h-12 px-4 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm text-slate-900 bg-white cursor-pointer"
                         >
                           <option value="Morning (9:00 AM - 12:00 PM)">Morning (9:00 AM – 12:00 PM)</option>
                           <option value="Early Afternoon (12:00 PM - 3:00 PM)">Early Afternoon (12:00 PM – 3:00 PM)</option>
@@ -358,7 +358,7 @@ export default function BookConsultationPage() {
                       </div>
                     </div>
 
-                    {/* Brief Project Notes */}
+                    {/* Row 6: Brief Project Notes */}
                     <div>
                       <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                         Brief Project Notes (Text Area)
@@ -369,17 +369,17 @@ export default function BookConsultationPage() {
                         value={formData.notes}
                         onChange={handleChange}
                         placeholder="Tell us rough dimensions, whether you have an existing deck, or any specific features you'd like (e.g., Trex Havana Gold, black aluminum railing, vaulted pine ceiling)."
-                        className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm text-slate-900 bg-white resize-none"
+                        className="w-full p-4 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm text-slate-900 bg-white resize-none"
                       />
                     </div>
 
-                    {/* Submit Button */}
+                    {/* Row 7: Submit Button */}
                     <div className="pt-2">
                       <button
                         type="submit"
-                        className="w-full py-4 px-6 rounded-xl font-extrabold text-base text-slate-950 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-300 hover:to-amber-500 shadow-xl shadow-amber-500/25 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-3 cursor-pointer"
+                        className="w-full h-14 rounded-xl font-extrabold text-base text-slate-950 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-300 hover:to-amber-500 shadow-xl shadow-amber-500/25 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-3 cursor-pointer"
                       >
-                        <Calendar className="w-5 h-5 text-slate-950" />
+                        <Calendar className="w-5 h-5 text-slate-950 flex-shrink-0" />
                         <span>Confirm My Free In-Home Consultation</span>
                       </button>
                       <p className="text-[11px] text-center text-slate-500 mt-2.5">
@@ -427,7 +427,7 @@ export default function BookConsultationPage() {
                   <button
                     type="button"
                     onClick={() => toggleFaq(faq.id)}
-                    className="w-full py-5 px-6 text-left flex items-center justify-between gap-4 focus:outline-none"
+                    className="w-full py-5 px-6 text-left flex items-center justify-between gap-4 focus:outline-none cursor-pointer"
                   >
                     <span className="font-extrabold text-base sm:text-lg font-heading text-slate-950">
                       {faq.question}
@@ -459,9 +459,9 @@ export default function BookConsultationPage() {
             </div>
             <a
               href="tel:9198882931"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-500 text-slate-950 font-bold text-xs sm:text-sm shadow-md whitespace-nowrap"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-500 text-slate-950 font-bold text-xs sm:text-sm shadow-md whitespace-nowrap hover:bg-amber-400 transition-colors"
             >
-              <Phone className="w-4 h-4" />
+              <Phone className="w-4 h-4 flex-shrink-0" />
               <span>(919) 888-2931</span>
             </a>
           </div>

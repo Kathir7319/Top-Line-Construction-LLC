@@ -36,17 +36,17 @@ export default function EstimateCalculator() {
   const { min, max } = calculateEstimate();
 
   return (
-    <div className="bg-slate-900 text-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-2xl border border-slate-800 relative overflow-hidden">
+    <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl border border-slate-800 relative overflow-hidden">
       {/* Decorative accent */}
       <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10">
-        <div className="flex items-center gap-3 mb-2">
-          <div className="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center">
+        <div className="flex items-center gap-3.5 mb-2">
+          <div className="w-11 h-11 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center flex-shrink-0">
             <Calculator className="w-5 h-5" />
           </div>
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-amber-400">
+            <span className="text-xs font-bold uppercase tracking-wider text-amber-400 block">
               Interactive Planning Tool
             </span>
             <h3 className="text-xl sm:text-2xl font-bold font-heading text-white">
@@ -58,15 +58,15 @@ export default function EstimateCalculator() {
           Get a realistic ballpark range for your Wake County custom deck or screened porch based on our transparent $10k–$30k+ project pricing standards.
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* Controls */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="lg:col-span-7 space-y-6 flex flex-col justify-between">
             {/* Project Type */}
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
+              <label className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2.5">
                 1. Select Outdoor Living Type
               </label>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 {[
                   { id: 'composite-deck', label: 'Trex® Composite', sub: 'Low maintenance' },
                   { id: 'wood-deck', label: 'Treated Lumber', sub: '#1 Southern Pine' },
@@ -76,14 +76,14 @@ export default function EstimateCalculator() {
                     key={type.id}
                     type="button"
                     onClick={() => setProjectType(type.id)}
-                    className={`p-3 rounded-xl border text-left transition-all ${
+                    className={`p-3.5 rounded-xl border text-left transition-all ${
                       projectType === type.id
                         ? 'border-amber-500 bg-amber-500/15 text-white shadow-sm ring-1 ring-amber-500'
                         : 'border-slate-800 bg-slate-950/60 text-slate-400 hover:border-slate-700'
                     }`}
                   >
-                    <div className="text-sm font-bold text-white">{type.label}</div>
-                    <div className="text-[11px] text-slate-400">{type.sub}</div>
+                    <div className="text-sm font-bold text-white leading-tight">{type.label}</div>
+                    <div className="text-[11px] text-slate-400 mt-0.5">{type.sub}</div>
                   </button>
                 ))}
               </div>
@@ -91,7 +91,7 @@ export default function EstimateCalculator() {
 
             {/* Approximate Square Footage Slider */}
             <div>
-              <div className="flex justify-between items-center mb-2">
+              <div className="flex justify-between items-baseline mb-2">
                 <label className="text-xs font-bold uppercase tracking-wider text-slate-300">
                   2. Approximate Size
                 </label>
@@ -108,7 +108,7 @@ export default function EstimateCalculator() {
                 onChange={(e) => setSqft(Number(e.target.value))}
                 className="w-full h-2.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-amber-500"
               />
-              <div className="flex justify-between text-[11px] text-slate-500 mt-1">
+              <div className="flex justify-between text-[11px] text-slate-500 mt-1.5">
                 <span>140 sq ft (Compact)</span>
                 <span>300 sq ft (Standard)</span>
                 <span>650 sq ft (Multi-Tier)</span>
@@ -116,7 +116,7 @@ export default function EstimateCalculator() {
             </div>
 
             {/* Custom Options */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
               <div>
                 <label className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
                   Railing Upgrade
@@ -124,7 +124,7 @@ export default function EstimateCalculator() {
                 <select
                   value={railing}
                   onChange={(e) => setRailing(e.target.value)}
-                  className="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2.5 text-sm text-white focus:outline-none focus:border-amber-500"
+                  className="w-full bg-slate-950 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-amber-500"
                 >
                   <option value="aluminum">Black Aluminum Balusters (Popular)</option>
                   <option value="composite">Trex Composite Post Sleeves</option>
@@ -132,26 +132,26 @@ export default function EstimateCalculator() {
                 </select>
               </div>
 
-              <div className="space-y-2">
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
+              <div className="space-y-2.5 flex flex-col justify-end">
+                <label className="block text-xs font-bold uppercase tracking-wider text-slate-300">
                   Integrated Enhancements
                 </label>
-                <label className="flex items-center gap-2 text-xs text-slate-300 cursor-pointer">
+                <label className="flex items-center gap-2.5 text-xs text-slate-300 cursor-pointer select-none">
                   <input
                     type="checkbox"
                     checked={includeLighting}
                     onChange={(e) => setIncludeLighting(e.target.checked)}
-                    className="rounded border-slate-700 text-amber-500 focus:ring-amber-500 bg-slate-950"
+                    className="w-4 h-4 rounded border-slate-700 text-amber-500 focus:ring-amber-500 bg-slate-950"
                   />
                   <span>Low-Voltage LED Post &amp; Riser Lights</span>
                 </label>
                 {projectType !== 'screened-porch' && (
-                  <label className="flex items-center gap-2 text-xs text-slate-300 cursor-pointer">
+                  <label className="flex items-center gap-2.5 text-xs text-slate-300 cursor-pointer select-none">
                     <input
                       type="checkbox"
                       checked={includeRoof}
                       onChange={(e) => setIncludeRoof(e.target.checked)}
-                      className="rounded border-slate-700 text-amber-500 focus:ring-amber-500 bg-slate-950"
+                      className="w-4 h-4 rounded border-slate-700 text-amber-500 focus:ring-amber-500 bg-slate-950"
                     />
                     <span>Add Covered Pavilion / Gable Roof</span>
                   </label>
@@ -161,30 +161,30 @@ export default function EstimateCalculator() {
           </div>
 
           {/* Result Card */}
-          <div className="lg:col-span-5 bg-gradient-to-br from-slate-950 to-slate-900 p-6 sm:p-7 rounded-2xl border-2 border-amber-500/50 shadow-xl flex flex-col justify-between">
+          <div className="lg:col-span-5 bg-gradient-to-br from-slate-950 to-slate-900 p-6 sm:p-7 rounded-2xl border-2 border-amber-500/50 shadow-xl flex flex-col justify-between h-full">
             <div>
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-400 text-xs font-bold mb-3">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 text-xs font-bold mb-3">
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Estimated Turnkey Investment</span>
               </div>
               <div className="text-3xl sm:text-4xl font-black font-heading text-white tracking-tight">
                 ${min.toLocaleString()} – ${max.toLocaleString()}
               </div>
-              <p className="text-xs text-slate-400 mt-2 leading-relaxed">
+              <p className="text-xs text-slate-400 mt-2.5 leading-relaxed">
                 *Includes complete structural framing, Wake County code engineering, materials, clean tear-out, and final municipal inspection walkthrough.
               </p>
             </div>
 
-            <div className="my-6 border-t border-slate-800 pt-4 space-y-2 text-xs text-slate-300">
-              <div className="flex items-center gap-2">
+            <div className="my-6 border-t border-slate-800 pt-5 space-y-2.5 text-xs text-slate-300">
+              <div className="flex items-center gap-2.5">
                 <Check className="w-4 h-4 text-amber-400 flex-shrink-0" />
                 <span>100% Itemized proposal with zero hidden fees</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2.5">
                 <Check className="w-4 h-4 text-amber-400 flex-shrink-0" />
                 <span>Physical Trex® color samples brought to your home</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2.5">
                 <Check className="w-4 h-4 text-amber-400 flex-shrink-0" />
                 <span>Structural ledger flashing &amp; concrete footings</span>
               </div>
@@ -192,7 +192,7 @@ export default function EstimateCalculator() {
 
             <Link
               to="/consultation"
-              className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl font-bold text-sm bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-slate-950 hover:from-amber-300 hover:to-amber-500 transition-all shadow-md group"
+              className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl font-bold text-sm bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-slate-950 hover:from-amber-300 hover:to-amber-500 transition-all shadow-md group text-center"
             >
               <span>Lock In Exact Written Quote</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

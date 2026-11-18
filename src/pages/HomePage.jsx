@@ -33,31 +33,30 @@ export default function HomePage() {
   return (
     <div className="bg-slate-50 min-h-screen">
       {/* SECTION 1: HERO BANNER */}
-      <section className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center justify-center overflow-hidden bg-slate-950 text-white">
-        {/* Hero Background Image with Rich Overlays */}
+      <section className="relative min-h-[85vh] lg:min-h-[88vh] flex items-center justify-center overflow-hidden bg-slate-950 text-white">
+        {/* Background Image & Rich Overlays */}
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1591825729269-caeb344f6df2?auto=format&fit=crop&w=2000&q=85"
             alt="Finished Custom Screened Porch and Composite Deck in Fuquay-Varina, NC"
             className="w-full h-full object-cover object-center scale-105 transform animate-fade-in duration-1000"
           />
-          {/* Multi-layer gradient overlays for contrast and readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/80 to-slate-950/60" />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/40" />
           <div className="absolute inset-0 bg-wood-slats opacity-20 pointer-events-none" />
         </div>
 
         {/* Content Container */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
           <div className="max-w-3xl">
             {/* Local Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-400 text-xs sm:text-sm font-bold tracking-wide uppercase mb-6 backdrop-blur-md">
-              <MapPin className="w-4 h-4 text-amber-400" />
+              <MapPin className="w-4 h-4 text-amber-400 flex-shrink-0" />
               <span>Fuquay-Varina &amp; Southern Wake County's Premier Builder</span>
             </div>
 
             {/* Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black font-heading text-white tracking-tight leading-[1.1] mb-6">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black font-heading text-white tracking-tight leading-[1.12] mb-6">
               Custom Decks &amp; Screened Porches Built for How <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500">Fuquay-Varina Lives.</span>
             </h1>
 
@@ -66,27 +65,27 @@ export default function HomePage() {
               From low-maintenance Trex® composite decks to custom-framed screened porches and home additions, Top Line Construction LLC delivers structural precision, clean job sites, and lasting outdoor living spaces across Southern Wake County.
             </p>
 
-            {/* Call to Actions */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-10">
+            {/* Primary Action Buttons - Aligned Heights */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 mb-10">
               <Link
                 to="/consultation"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-base font-extrabold text-slate-950 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-300 hover:to-amber-500 shadow-xl shadow-amber-500/20 hover:shadow-amber-500/35 transition-all duration-300 transform hover:-translate-y-0.5 text-center"
+                className="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl text-sm sm:text-base font-extrabold text-slate-950 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-300 hover:to-amber-500 shadow-xl shadow-amber-500/20 hover:shadow-amber-500/35 transition-all duration-300 transform hover:-translate-y-0.5 text-center"
               >
-                <Calendar className="w-5 h-5 text-slate-950" />
+                <Calendar className="w-5 h-5 text-slate-950 flex-shrink-0" />
                 <span>Book Your Free In-Home Design Consultation</span>
               </Link>
 
               <a
                 href="tel:9198882931"
-                className="inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl text-base font-bold text-white bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 backdrop-blur-md transition-all text-center"
+                className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm sm:text-base font-bold text-white bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 backdrop-blur-md transition-all text-center whitespace-nowrap"
               >
-                <Phone className="w-5 h-5 text-amber-400" />
+                <Phone className="w-5 h-5 text-amber-400 flex-shrink-0" />
                 <span>(919) 888-2931</span>
               </a>
             </div>
 
             {/* Quick Hero Trust Indicators */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-4 border-t border-slate-800/80 text-xs sm:text-sm text-slate-300">
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2.5 pt-6 border-t border-slate-800/80 text-xs sm:text-sm text-slate-300">
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-amber-400 flex-shrink-0" />
                 <span>Fully Insured Liability</span>
@@ -95,7 +94,7 @@ export default function HomePage() {
                 <Award className="w-4 h-4 text-amber-400 flex-shrink-0" />
                 <span>NC Code Compliant</span>
               </div>
-              <div className="flex items-center gap-2 col-span-2 sm:col-span-1">
+              <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-amber-400 flex-shrink-0" />
                 <span>$10k–$30k+ Turnkey Projects</span>
               </div>
@@ -122,10 +121,10 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
             {/* Card 1: Custom Composite & Wood Decks */}
-            <div className="group relative bg-slate-900 rounded-2xl overflow-hidden shadow-xl border border-slate-800 flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300">
-              <div className="relative h-64 sm:h-72 w-full overflow-hidden">
+            <div className="group relative bg-slate-900 rounded-2xl overflow-hidden shadow-xl border border-slate-800 flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 h-full">
+              <div className="relative h-64 sm:h-72 w-full overflow-hidden bg-slate-950 flex-shrink-0">
                 <img
                   src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=1000&q=80"
                   alt="Custom Composite & Wood Decks in Fuquay-Varina"
@@ -133,7 +132,7 @@ export default function HomePage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
                 <span className="absolute top-4 left-4 px-3 py-1 bg-amber-500 text-slate-950 text-xs font-black uppercase tracking-wider rounded-md shadow-md">
-                  Page 2 Showcase
+                  Custom Decks
                 </span>
                 <span className="absolute bottom-4 right-4 text-xs font-semibold text-white/90 bg-slate-900/80 px-2.5 py-1 rounded backdrop-blur">
                   $10k – $30k Builds
@@ -148,16 +147,16 @@ export default function HomePage() {
                   <p className="mt-3 text-slate-300 text-sm sm:text-base leading-relaxed">
                     Multi-level decks, custom staircases, wrap-around porches, and architectural railings built with Trex® composite decking or #1 Southern Yellow Pine. Built with 12" on-center joist spacing and Simpson Strong-Tie® hardware.
                   </p>
-                  <ul className="mt-5 space-y-2 text-xs sm:text-sm text-slate-300">
-                    <li className="flex items-center gap-2">
+                  <ul className="mt-5 space-y-2.5 text-xs sm:text-sm text-slate-300">
+                    <li className="flex items-center gap-2.5">
                       <CheckCircle2 className="w-4 h-4 text-amber-400 flex-shrink-0" />
                       <span>Trex® Transcend, Enhance, &amp; Select Composite Options</span>
                     </li>
-                    <li className="flex items-center gap-2">
+                    <li className="flex items-center gap-2.5">
                       <CheckCircle2 className="w-4 h-4 text-amber-400 flex-shrink-0" />
                       <span>Powder-coated black aluminum baluster &amp; cable railings</span>
                     </li>
-                    <li className="flex items-center gap-2">
+                    <li className="flex items-center gap-2.5">
                       <CheckCircle2 className="w-4 h-4 text-amber-400 flex-shrink-0" />
                       <span>Low-voltage riser LEDs &amp; picture-frame border designs</span>
                     </li>
@@ -172,14 +171,14 @@ export default function HomePage() {
                     <span>Explore Custom Decks</span>
                     <ArrowRight className="w-4 h-4" />
                   </Link>
-                  <span className="text-xs text-slate-500">1–2 Weeks Build</span>
+                  <span className="text-xs text-slate-500 font-medium">1–2 Weeks Build</span>
                 </div>
               </div>
             </div>
 
             {/* Card 2: Screened Porches & Home Additions */}
-            <div className="group relative bg-slate-900 rounded-2xl overflow-hidden shadow-xl border border-slate-800 flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300">
-              <div className="relative h-64 sm:h-72 w-full overflow-hidden">
+            <div className="group relative bg-slate-900 rounded-2xl overflow-hidden shadow-xl border border-slate-800 flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 h-full">
+              <div className="relative h-64 sm:h-72 w-full overflow-hidden bg-slate-950 flex-shrink-0">
                 <img
                   src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80"
                   alt="Custom Screened Porches & Home Additions"
@@ -187,7 +186,7 @@ export default function HomePage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
                 <span className="absolute top-4 left-4 px-3 py-1 bg-amber-500 text-slate-950 text-xs font-black uppercase tracking-wider rounded-md shadow-md">
-                  Page 3 Showcase
+                  Screened Porches
                 </span>
                 <span className="absolute bottom-4 right-4 text-xs font-semibold text-white/90 bg-slate-900/80 px-2.5 py-1 rounded backdrop-blur">
                   $18k – $35k+ Additions
@@ -202,16 +201,16 @@ export default function HomePage() {
                   <p className="mt-3 text-slate-300 text-sm sm:text-base leading-relaxed">
                     Vaulted ceilings, tongue-and-groove finishes, custom framing, and seamless roofline tie-ins that turn your backyard into bug-free living space. Engineered to withstand North Carolina heat and heavy rain.
                   </p>
-                  <ul className="mt-5 space-y-2 text-xs sm:text-sm text-slate-300">
-                    <li className="flex items-center gap-2">
+                  <ul className="mt-5 space-y-2.5 text-xs sm:text-sm text-slate-300">
+                    <li className="flex items-center gap-2.5">
                       <CheckCircle2 className="w-4 h-4 text-amber-400 flex-shrink-0" />
                       <span>Seamless gable &amp; shed roof tie-ins matching your home</span>
                     </li>
-                    <li className="flex items-center gap-2">
+                    <li className="flex items-center gap-2.5">
                       <CheckCircle2 className="w-4 h-4 text-amber-400 flex-shrink-0" />
                       <span>Vaulted tongue-and-groove ceilings with fan pre-wiring</span>
                     </li>
-                    <li className="flex items-center gap-2">
+                    <li className="flex items-center gap-2.5">
                       <CheckCircle2 className="w-4 h-4 text-amber-400 flex-shrink-0" />
                       <span>High-visibility &amp; pet-resistant screening systems</span>
                     </li>
@@ -226,7 +225,7 @@ export default function HomePage() {
                     <span>View Screened Porches</span>
                     <ArrowRight className="w-4 h-4" />
                   </Link>
-                  <span className="text-xs text-slate-500">2–4 Weeks Build</span>
+                  <span className="text-xs text-slate-500 font-medium">2–4 Weeks Build</span>
                 </div>
               </div>
             </div>
@@ -237,7 +236,7 @@ export default function HomePage() {
       {/* SECTION 4: FEATURED PROJECT GALLERY PREVIEW */}
       <section className="py-20 lg:py-24 bg-slate-900 text-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div>
               <span className="inline-block text-xs sm:text-sm font-bold uppercase tracking-widest text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full mb-3">
                 Visual Portfolio Grid
@@ -251,11 +250,11 @@ export default function HomePage() {
             </div>
 
             {/* Category Filter Pills */}
-            <div className="flex items-center gap-2 mt-6 md:mt-0 overflow-x-auto pb-2 md:pb-0">
+            <div className="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 flex-shrink-0">
               <button
                 type="button"
                 onClick={() => setActiveCategory('all')}
-                className={`px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all ${
+                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all ${
                   activeCategory === 'all'
                     ? 'bg-amber-500 text-slate-950 shadow-md'
                     : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
@@ -266,7 +265,7 @@ export default function HomePage() {
               <button
                 type="button"
                 onClick={() => setActiveCategory('decks')}
-                className={`px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all ${
+                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all ${
                   activeCategory === 'decks'
                     ? 'bg-amber-500 text-slate-950 shadow-md'
                     : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
@@ -277,7 +276,7 @@ export default function HomePage() {
               <button
                 type="button"
                 onClick={() => setActiveCategory('porches')}
-                className={`px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all ${
+                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all ${
                   activeCategory === 'porches'
                     ? 'bg-amber-500 text-slate-950 shadow-md'
                     : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
@@ -288,15 +287,15 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Project Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {/* Project Grid with Equal Height Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
             {filteredProjects.map((project) => (
               <div
                 key={project.id}
                 onClick={() => setSelectedProject(project)}
-                className="group cursor-pointer bg-slate-950 rounded-2xl overflow-hidden border border-slate-800 hover:border-amber-500/60 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between"
+                className="group cursor-pointer bg-slate-950 rounded-2xl overflow-hidden border border-slate-800 hover:border-amber-500/60 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between h-full"
               >
-                <div className="relative h-60 sm:h-64 w-full overflow-hidden bg-slate-800">
+                <div className="relative h-60 sm:h-64 w-full overflow-hidden bg-slate-800 flex-shrink-0">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -304,16 +303,16 @@ export default function HomePage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
                   
-                  <span className="absolute top-3 left-3 px-2.5 py-1 rounded bg-slate-900/90 backdrop-blur text-amber-400 text-xs font-bold uppercase tracking-wider border border-amber-500/30">
+                  <span className="absolute top-3.5 left-3.5 px-2.5 py-1 rounded bg-slate-900/90 backdrop-blur text-amber-400 text-xs font-bold uppercase tracking-wider border border-amber-500/30">
                     {project.badge}
                   </span>
 
-                  <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-slate-950/70 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="absolute top-3.5 right-3.5 w-8 h-8 rounded-full bg-slate-950/70 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                     <Maximize2 className="w-4 h-4 text-amber-400" />
                   </div>
 
-                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-slate-300">
-                    <span className="flex items-center gap-1 font-semibold text-amber-400">
+                  <div className="absolute bottom-3 left-3.5 right-3.5 flex items-center justify-between text-xs text-slate-300">
+                    <span className="flex items-center gap-1.5 font-semibold text-amber-400">
                       <MapPin className="w-3.5 h-3.5" />
                       {project.location}
                     </span>
@@ -325,10 +324,10 @@ export default function HomePage() {
 
                 <div className="p-5 flex-1 flex flex-col justify-between">
                   <div>
-                    <h3 className="text-base sm:text-lg font-bold font-heading text-white group-hover:text-amber-400 transition-colors line-clamp-2">
+                    <h3 className="text-base sm:text-lg font-bold font-heading text-white group-hover:text-amber-400 transition-colors line-clamp-2 leading-snug">
                       {project.title}
                     </h3>
-                    <p className="mt-2 text-xs sm:text-sm text-slate-400 line-clamp-2">
+                    <p className="mt-2 text-xs sm:text-sm text-slate-400 line-clamp-2 leading-relaxed">
                       {project.description}
                     </p>
                   </div>
@@ -381,11 +380,11 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
             {testimonialsData.map((t) => (
               <div
                 key={t.id}
-                className="bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+                className="bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between h-full"
               >
                 <div>
                   {/* Rating Stars */}
@@ -431,7 +430,6 @@ export default function HomePage() {
 
       {/* SECTION 6: BOTTOM CONVERSION BANNER */}
       <section className="relative py-20 lg:py-24 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
-        {/* Subtle decorative radial accent */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
